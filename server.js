@@ -44,6 +44,11 @@ let fruits = [
 
 // Express Routes
 
+const usersRouter = require("./routes/users");
+const fruitsRouter = require("./routes/fruits");
+
+app.use("/users", usersRouter);
+app.use("/fruits", fruitsRouter);
 
 
 
