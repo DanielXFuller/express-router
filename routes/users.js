@@ -1,3 +1,6 @@
+const express = require("express");
+const router = express.Router();
+
 let users = [
     {
         name: "User 1",
@@ -16,3 +19,15 @@ let users = [
         age: 22
     }
 ]
+
+router.get("/", (req, res) => {
+    res.json(users);
+});
+
+router.get("/:id", (req, res) => {
+    const id = req.params.id;
+    const user = users[id];
+    res.json(user);
+});
+
+module.exports = router;
