@@ -52,6 +52,44 @@ app.use("/fruits", fruitsRouter);
 
 
 
+
+// POST /users
+usersRouter.post("/", (req, res) => {
+
+});
+
+// PUT /users/:id
+usersRouter.put("/:id", (req, res) => {
+  const id = req.params.id;
+
+});
+
+// DELETE /users/:id
+usersRouter.delete("/:id", (req, res) => {
+  const id = req.params.id;
+
+});
+
+
+
+
+// POST /fruits
+fruitsRouter.post("/", (req, res) => {
+
+});
+
+// PUT /fruits/:id
+fruitsRouter.put("/:id", (req, res) => {
+  const id = req.params.id;
+
+});
+
+// DELETE /fruits/:id
+fruitsRouter.delete("/:id", (req, res) => {
+  const id = req.params.id;
+
+});
+
 app.listen(port, () => {
     console.log(`App listening on port ${port}`)
 })
